@@ -20,5 +20,5 @@ formulario.addEventListener("submit", event => {
         valorImpuestoEstado = 8.25;
     const valorImpuesto =  "Impuesto del estado: " + valorImpuestoEstado + "%";
     impuestoEstado.innerHTML = "<p>" + "Impuesto del estado: " + valorImpuestoEstado + "%" + "</p>";
-    resultado.innerHTML = cantidad * precio;
+    resultado.innerHTML = "Precio neto: " + cantidad * precio;
 });
