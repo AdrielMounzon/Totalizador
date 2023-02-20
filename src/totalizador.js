@@ -1,5 +1,6 @@
 const formulario = document.querySelector("#formularioTotalizador");
 const resultado = document.querySelector("#resultado");
+const estado = document.querySelector("#estado")
 
 formulario.addEventListener("submit", event => {
     event.preventDefault();
