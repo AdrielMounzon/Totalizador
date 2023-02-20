@@ -1,7 +1,8 @@
 const formulario = document.querySelector("#formularioTotalizador");
-const resultado = document.querySelector("#resultado");
+const precioNeto = document.querySelector("#precioNeto");
 const estado = document.querySelector("#estado")
 const impuestoEstado = document.querySelector("#impuestoEstado")
+const precioTotal = document.querySelector("#precioTotal")
 
 formulario.addEventListener("submit", event => {
     event.preventDefault();
@@ -18,7 +19,7 @@ formulario.addEventListener("submit", event => {
         valorImpuestoEstado = 4;
     else if(estado.value=="CA")
         valorImpuestoEstado = 8.25;
-    const valorImpuesto =  "Impuesto del estado: " + valorImpuestoEstado + "%";
     impuestoEstado.innerHTML = "<p>" + "Impuesto del estado: " + valorImpuestoEstado + "%" + "</p>";
-    resultado.innerHTML = "Precio neto: " + cantidad * precio;
+    precioNeto.innerHTML = "Precio neto: " + cantidad * precio;
+    precioTotal.innerHTML = "Precio total: " + cantidad * precio * (1+valorImpuestoEstado/100)
 });
